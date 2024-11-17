@@ -3,6 +3,6 @@ DELAY 500
 STRING powershell 
 ENTER
 DELAY 500
-STRING Start-Process powershell.exe -ArgumentList "-NoProfile -Command {The script}" -WindowStyle Hidden
+STRING Start-Process powershell.exe -ArgumentList "The script" -WindowStyle Hidden
 ENTER
 
