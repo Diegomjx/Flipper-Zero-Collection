@@ -1,2 +1,1 @@
-# Bad-USB-Flipper
-A collection of bad usb's 
+Welp the things I do, wen i have time
