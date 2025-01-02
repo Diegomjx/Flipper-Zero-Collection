@@ -1,3 +1,4 @@
+//Only works on Rogue master Firmware
 let dialog = require("dialog");
 let keyboard = require("keyboard");
 let storage = require("storage");
