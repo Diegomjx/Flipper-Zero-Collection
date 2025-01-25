@@ -58,5 +58,5 @@ Add these files to `/subghz/` on your Flipper Zero (preferrably in a new directo
 `920.50 - 923.50 MHz`
 
 
-#Crete by SHUR1K-N 
-(https://github.com/SHUR1K-N/Flipper-Zero-Sub-GHz-Jamming-Files)
+# Crete by SHUR1K-N 
+https://github.com/SHUR1K-N/Flipper-Zero-Sub-GHz-Jamming-Files
