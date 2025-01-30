@@ -1,12 +1,8 @@
 //Firmware: Rogue master
-//Not Aproved
-
-let storage = require("storage");
-let submenu = require("submenu");
-let dialog = require("dialog");
-let infrared = require("infrared");
 let subghz = require("subghz");
-
+//let infrared = require("infrared"); Need a plugin for this
+let storage = require("storage");
+let dialog = require("dialog");
 
 let path = "/ext/payloads";
 
@@ -17,11 +13,18 @@ if (storage.exists(path)) {
             if(result.indexOf(".js") > -1) {
                 print("Is a JS file");
             }else if(result.indexOf(".sub") > -1) {
+                subghz.setup();
+                print("Sending: ", result);
                 let resultsubghz = subghz.transmitFile(result);
+                subghz.end()
                 if (resultsubghz) { print("sent"); } else { print("failed to send"); }
             } else if(result.indexOf(".ir") > -1) {
+              /*
+                infrared.setup();
                 let resultinfrared = infrared.transmitFile(result);
+                infrared.end()
                 if (resultinfrared) { print("sent"); } else { print("failed to send"); }
+                */
             } else {
                 print("File exists: is unknown");
             }
@@ -33,3 +36,5 @@ if (storage.exists(path)) {
 } else {
     print("File not found");
 }
+
+
