@@ -1,3 +1,6 @@
 [submodule "Flipper-Zero-Sub-GHz-Jamming-Files"]
 	path = Flipper-Zero-Sub-GHz-Jamming-Files
 	url = https://github.com/SHUR1K-N/Flipper-Zero-Sub-GHz-Jamming-Files
+[submodule "subghz/Flipper-Zero-Sub-GHz-Jamming-Files"]
+	path = subghz/Flipper-Zero-Sub-GHz-Jamming-Files
+	url = https://github.com/SHUR1K-N/Flipper-Zero-Sub-GHz-Jamming-Files.git
