@@ -74,6 +74,6 @@ exists(path_scripts);
 
 // Organize files and folders within Flipper-Zero
 Order(path, path_infrared, [".ir"]);
-Order(path, path_subGHz, [".sub"]);
-Order(path, path_bad_usb, [".txt", ".json", ".bin"]);
-Order(path, path_scripts, [".fap", ".py", ".lua"]);
+Order(path, path_subGHz, [".sub"]);   
+Order(path, path_bad_usb, [".txt", ".json", ".bin"]); 
+Order(path, path_scripts, [".py", ".js",".fap", ".lua"]); 
