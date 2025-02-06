@@ -7,3 +7,6 @@
 [submodule "infrared/Flipper-IRDB"]
 	path = infrared/Flipper-IRDB
 	url = https://github.com/Lucaslhm/Flipper-IRDB
+[submodule "NFC/NFC-Trolls"]
+	path = NFC/NFC-Trolls
+	url = https://github.com/w0lfzk1n/Flipper-Zero-NFC-Trolls.git
