@@ -4,7 +4,7 @@
    - Keeps folder structures intact within each category.
    - Deletes empty folders after processing.
 
-   Version: 1.3
+   Version: 1.4
    Author: Diegomjx
 */
 
@@ -16,7 +16,7 @@ let path_infrared = "/ext/infrared/payloads";
 let path_subGHz  = "/ext/subghz/payloads";
 let path_bad_usb = "/ext/badusb/payloads";
 let path_scripts = "/ext/apps/Scripts/payloads";
-let path_NFC = "/ext/nfc/payloads"
+let path_NFC = "/ext/nfc/payloads";
 
 function Order(Initial_path, final_path, extensions) {
     let files = storage.list(Initial_path);
@@ -72,7 +72,7 @@ exists(path_infrared);
 exists(path_subGHz);
 exists(path_bad_usb);
 exists(path_scripts);
-exists(path_NFC)
+exists(path_NFC);
 
 // Organize files and folders within Flipper-Zero
 Order(path, path_infrared, [".ir"]);
