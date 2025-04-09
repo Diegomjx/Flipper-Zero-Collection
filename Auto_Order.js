@@ -4,7 +4,7 @@
    - Keeps folder structures intact within each category.
    - Deletes empty folders after processing.
 
-   Version: 1.4
+   Version: 0.1.4
    Author: Diegomjx
 */
 
